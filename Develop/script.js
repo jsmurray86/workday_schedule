@@ -2,6 +2,7 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 var currentDayEl = $("#currentDay");
+var saveBtn = $(".save");
 
 function displayTime() {
   var rightNow = dayjs().format("MMM DD, YYYY [at] hh:mm:ss a");
