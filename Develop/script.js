@@ -5,8 +5,10 @@ var currentDayEl = $("#currentDay");
 
 function displayTime() {
   var rightNow = dayjs().format("MMM DD, YYYY [at] hh:mm:ss a");
-  timeDisplayEl.text(rightNow);
+  currentDayEl.text(rightNow);
 }
+
+displayTime();
 
 $(function () {
   // TODO: Add a listener for click events on the save button. This code should
