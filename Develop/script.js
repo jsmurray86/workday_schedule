@@ -4,7 +4,9 @@
 var currentDayEl = $("#currentDay");
 var saveBtn = $(".save");
 var userInput = $(".col-8");
+var saveUserInput = $("#hour-9 #hour-10 #hour-11");
 
+//
 function displayTime() {
   var rightNow = dayjs().format("MMM DD, YYYY [at] hh:mm:ss a");
   currentDayEl.text(rightNow);
@@ -12,11 +14,28 @@ function displayTime() {
 
 displayTime();
 
-$(function () {
-  $(".btn").click(function (SaveUserInput) {
-    userInput.text(localStorage);
-  });
-  console.log;
+//listen for save button click, save to local storage
+saveBtn.on('click', function () {
+  saveUserInput.text(localStorage);
+})
+ 
+  // code to apply past present future class to each time block by comparing id to current hour
+
+  while (#hours <= rightNow) {
+    document.write(".row time-block past")
+  }
+
+  while (#hour === rightNow) {
+    document.write(".row time-block present")
+
+  }
+
+  while (#hours >= rightNow) {
+    document.write(".row time-block future")
+  }
+
+
+
 
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
@@ -36,4 +55,4 @@ $(function () {
   // attribute of each time-block be used to do this?
   //
   // TODO: Add code to display the current date in the header of the page.
-});
+);
