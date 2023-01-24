@@ -3,6 +3,7 @@
 // in the html.
 var currentDayEl = $("#currentDay");
 var saveBtn = $(".save");
+var userInput = $(".col-8");
 
 function displayTime() {
   var rightNow = dayjs().format("MMM DD, YYYY [at] hh:mm:ss a");
@@ -12,6 +13,11 @@ function displayTime() {
 displayTime();
 
 $(function () {
+  $(".btn").click(function (SaveUserInput) {
+    userInput.text(localStorage);
+  });
+  console.log;
+
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
